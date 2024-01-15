@@ -11,16 +11,16 @@ public class Account {
         this.balance= balance;
     }
     public double getBalance(){
-        return this.balance;
+        return balance;
     }
     public void deposit(double amount){
         if (amount < 0) throw new IllegalArgumentException("Can't be negative.");
-        this.balance += amount;
+        balance += amount;
     }
     public void withdraw(double amount){
         if(amount < 0) throw new IllegalArgumentException("Can't be negative.");
         if(amount > this.balance) throw new IllegalArgumentException("Can't be greater han the balance");
-        this.balance -= amount;
+           balance -= amount;
     }
     public boolean checkPin(int pin){
        if (this.pin == pin){
