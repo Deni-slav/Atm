@@ -22,10 +22,12 @@ public class Account {
         if(amount > this.balance) throw new IllegalArgumentException("Can't be greater han the balance");
         this.balance -= amount;
     }
-    public boolean checkPin(double pin){
-        return Objects.equals(this.pin, pin);
-    }
-
+    public boolean checkPin(int pin){
+       if (this.pin == pin){
+           return true;
+        } 
+           return false;
+       }
     public int getAccountNumber() {
         return accountNumber;
     }
